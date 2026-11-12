@@ -1,0 +1,24 @@
+{
+	"name": "orbweaver",
+	"version": "1.0.0",
+	"description": "Completes your accepted Discord Quests from the client console.",
+	"private": true,
+	"type": "module",
+	"license": "MIT",
+	"author": "Mohanad Tarek",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/mohanvd/orbweaver.git"
+	},
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"build": "node scripts/build.js",
+		"test": "node --test",
+		"check": "npm test && npm run build"
+	},
+	"devDependencies": {
+		"esbuild": "^0.25.0"
+	}
+}
