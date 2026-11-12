@@ -1,9 +1,16 @@
+<p align="center">
+  <img src=".github/assets/banner.svg" alt="orbweaver" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/mohanvd/orbweaver/actions/workflows/ci.yml"><img src="https://github.com/mohanvd/orbweaver/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/mohanvd/orbweaver/releases/latest"><img src="https://img.shields.io/github/v/release/mohanvd/orbweaver?color=8b5cf6" alt="Latest release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-8b5cf6.svg" alt="License: MIT"></a>
+</p>
+
 # orbweaver
 
 Completes the Discord Quests you have accepted, from the client's own console. One file, no install, no token.
-
-[![CI](https://github.com/mohanvd/orbweaver/actions/workflows/ci.yml/badge.svg)](https://github.com/mohanvd/orbweaver/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-8b5cf6.svg)](LICENSE)
 
 > [!CAUTION]
 > Automating quests breaks Discord's Terms of Service, and Discord acts on it. Since 2026 accounts caught doing this have had quest access suspended, and enforcement can reach the whole account. orbweaver does nothing to hide itself and never will. If you run it, assume Discord can see that you did. Do not run it on an account you cannot afford to lose.
@@ -26,7 +33,7 @@ It does not accept quests for you and it does not claim rewards. Those stay manu
 1. Accept a quest in Discord under **Quests**.
 2. Open DevTools in the desktop app with `Ctrl+Shift+I` (`Cmd+Option+I` on macOS).
 3. Open the **Console** tab.
-4. Paste the contents of [`dist/orbweaver.js`](dist/orbweaver.js) and press Enter.
+4. Paste the contents of `orbweaver.js` from the [latest release](https://github.com/mohanvd/orbweaver/releases/latest) and press Enter. The same file lives at [`dist/orbweaver.js`](dist/orbweaver.js).
 5. Leave the window open. Progress is printed as it goes.
 
 If DevTools does not open, close Discord fully, add this line to its `settings.json` (`%appdata%\discord\settings.json` on Windows), and start it again:
@@ -106,6 +113,12 @@ A lookup failure names the module that went missing:
 ```
 
 Open `src/discord/modules.js`, find that spec, and update its `match` to a method the store still has. Add a test for the new shape.
+
+If you hit one and do not want to fix it yourself, [open an issue](https://github.com/mohanvd/orbweaver/issues/new/choose) with the console output.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for setup and for what is out of scope. Changes are tracked in [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 

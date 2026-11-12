@@ -1,0 +1,43 @@
+name: Broken after a Discord update
+description: A lookup failed or a quest type stopped working.
+labels: [bug]
+body:
+  - type: textarea
+    id: output
+    attributes:
+      label: Console output
+      description: Everything orbweaver printed, including the error. Remove anything personal.
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: quest
+    attributes:
+      label: Quest type
+      options:
+        - Watch a video
+        - Play a game
+        - Stream a game
+        - Play an activity
+        - Not sure / failed before any quest started
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: Discord client
+      options:
+        - Desktop (Stable)
+        - Desktop (PTB)
+        - Desktop (Canary)
+        - Browser
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: orbweaver version
+      description: The version in the banner at the top of the file you pasted.
+      placeholder: 1.0.0
+    validations:
+      required: true
